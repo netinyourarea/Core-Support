@@ -1,0 +1,2 @@
+- This is a client-side SPA (Vite + TanStack Router, no SSR). Keep the Core Support marketing experience in the index route as one anchored page because every marketing section belongs to a single call-focused journey.
+- Core Support brand palette lives only in src/styles.css tokens: evergreen `--pine`, warm `--coral` call-to-action, `--cream` and `--sage` backgrounds — never hardcode other purples/blues or new hex colors in components; the logo mark is src/assets/core-support-logo.png and also the favicon.
