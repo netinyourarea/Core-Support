@@ -182,12 +182,9 @@ function Index() {
               Support helps you understand your options and prepare for the next step.
             </p>
             <div className="mt-8 flex flex-col items-start gap-5">
-              <CallLink className="h-auto min-h-14 w-full max-w-[390px] justify-between whitespace-normal rounded-full bg-coral px-6 py-3 text-left text-base font-bold text-pine shadow-lg shadow-pine/20 hover:bg-cream sm:w-auto sm:min-w-[360px]">
-                <span className="flex items-center gap-3">
-                  <Phone aria-hidden="true" className="size-5" />
-                  Call for Shopping Assistance
-                </span>
-                <span className="text-sm font-semibold">{ASSISTANCE_PHONE_DISPLAY}</span>
+              <CallLink className="h-14 rounded-full bg-coral px-8 text-lg font-bold text-pine shadow-lg shadow-pine/20 hover:bg-cream">
+                <Phone aria-hidden="true" className="size-5" />
+                {ASSISTANCE_PHONE_DISPLAY}
               </CallLink>
               <Link
                 to="/"
@@ -323,9 +320,8 @@ function Index() {
             ))}
           </div>
           <div className="mt-11 border-t border-border pt-7">
-            <CallLink className="h-auto min-h-12 whitespace-normal rounded-full bg-pine px-6 py-3 text-center text-background hover:bg-pine-ink">
-              <Phone aria-hidden="true" /> Speak With Our Assistance Team —{" "}
-              {ASSISTANCE_PHONE_DISPLAY}
+            <CallLink className="h-12 rounded-full bg-pine px-6 text-background hover:bg-pine-ink">
+              <Phone aria-hidden="true" /> {ASSISTANCE_PHONE_DISPLAY}
             </CallLink>
           </div>
         </div>
@@ -364,7 +360,7 @@ function Index() {
                 size="lg"
                 className="h-12 rounded-full bg-pine px-6 text-background hover:bg-pine-ink"
               >
-                <Phone aria-hidden="true" /> Call Core Support Now
+                <Phone aria-hidden="true" /> {ASSISTANCE_PHONE_DISPLAY}
               </CallLink>
             </div>
           </div>
@@ -503,7 +499,7 @@ function Index() {
               variant="outline"
               className="h-11 w-fit rounded-full border-pine/25 bg-transparent px-5 text-pine hover:bg-sage"
             >
-              <Phone aria-hidden="true" /> Call {ASSISTANCE_PHONE_DISPLAY}
+              <Phone aria-hidden="true" /> {ASSISTANCE_PHONE_DISPLAY}
             </CallLink>
           </div>
         </div>
@@ -626,7 +622,7 @@ function Index() {
               size="lg"
               className="h-auto min-h-14 w-full justify-center whitespace-normal rounded-full bg-coral px-7 py-3 text-center text-pine hover:bg-cream sm:w-auto"
             >
-              <Phone aria-hidden="true" /> Call Core Support — {ASSISTANCE_PHONE_DISPLAY}
+              <Phone aria-hidden="true" /> {ASSISTANCE_PHONE_DISPLAY}
             </CallLink>
           </div>
         </div>

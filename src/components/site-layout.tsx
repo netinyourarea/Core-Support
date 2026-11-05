@@ -83,7 +83,7 @@ function SiteHeader() {
             className="hidden h-10 rounded-full bg-pine px-5 text-background hover:bg-pine-ink sm:inline-flex"
           >
             <Phone aria-hidden="true" />
-            <span>Call {ASSISTANCE_PHONE_DISPLAY}</span>
+            <span>{ASSISTANCE_PHONE_DISPLAY}</span>
           </CallLink>
           <CallLink
             size="icon"
@@ -194,9 +194,22 @@ function MobileCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md sm:hidden">
       <CallLink className="h-12 w-full rounded-full bg-pine text-background hover:bg-pine-ink">
-        <Phone aria-hidden="true" /> Call Core Support — {ASSISTANCE_PHONE_DISPLAY}
+        <Phone aria-hidden="true" /> {ASSISTANCE_PHONE_DISPLAY}
       </CallLink>
     </div>
+  );
+}
+
+function FloatingCallButton() {
+  return (
+    <a
+      href={ASSISTANCE_PHONE_HREF}
+      aria-label={`Call ${ASSISTANCE_PHONE_DISPLAY}`}
+      className="fixed bottom-6 right-6 z-50 hidden h-14 items-center gap-2 rounded-full bg-coral px-6 text-base font-bold text-pine shadow-lg shadow-pine/25 transition-colors hover:bg-cream sm:inline-flex"
+    >
+      <Phone aria-hidden="true" className="size-5" />
+      {ASSISTANCE_PHONE_DISPLAY}
+    </a>
   );
 }
 
@@ -207,6 +220,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main>{children}</main>
       <SiteFooter />
       <MobileCallBar />
+      <FloatingCallButton />
     </div>
   );
 }

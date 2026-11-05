@@ -7,9 +7,9 @@ import {
 } from "@/lib/core-support";
 
 describe("Core Support visitor tools", () => {
-  it("uses the requested placeholder and the matching call link", () => {
-    expect(ASSISTANCE_PHONE_DISPLAY).toBe("xxx-xxx-xxxx");
-    expect(ASSISTANCE_PHONE_HREF).toBe("tel:xxx-xxx-xxxx");
+  it("uses the Core Support phone number and the matching call link", () => {
+    expect(ASSISTANCE_PHONE_DISPLAY).toBe("(888) 394-3037");
+    expect(ASSISTANCE_PHONE_HREF).toBe("tel:+18883943037");
   });
 
   it("counts whole calendar days between dates regardless of order", () => {

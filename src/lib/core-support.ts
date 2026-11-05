@@ -1,5 +1,5 @@
-export const ASSISTANCE_PHONE_DISPLAY = "xxx-xxx-xxxx";
-export const ASSISTANCE_PHONE_HREF = `tel:${ASSISTANCE_PHONE_DISPLAY}`;
+export const ASSISTANCE_PHONE_DISPLAY = "(888) 394-3037";
+export const ASSISTANCE_PHONE_HREF = "tel:+18883943037";
 
 export function countDaysBetween(start: string, end: string): number | null {
   if (!start || !end) return null;
